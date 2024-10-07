@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--=============== FAVICON ===============-->
+     <link rel="shortcut icon" href="images/logo/2.png" type="image/x-icon">
+
+     <!--=============== REMIXICONS ===============-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+     <!-- FONT AWESOME CDNJS LINK-->
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> -->
+
+     <!--=============== SWIPER CSS ===============-->
+     <link rel="stylesheet" href="swiper-bundle.min.css">
+
+     <!--=============== CSS ===============-->
+     <link rel="stylesheet" href="styles.css">
+    <title> E-Commerce  Website </title>
+</head>
+<body>
+   <!--==================== HEADER ====================-->
+   <header class="header" id="header">
+    <nav class="nav container">
+       <a href="#" class="nav-logo">
+        <i class="ri-code-s-slash-line"></i>Nerd-Nest
+       </a>
+
+           <div class="nav-menu">
+               <ul class="nav-list">
+
+                   <li class="nav-item">
+                       <a href="index.html" class="nav-link ">
+                        <i class="ri-home-2-line"></i>
+                           <span>Home </span>
+                       </a>
+                   </li>
+
+                   <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <i class="ri-file-info-line"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="membership.html" class="nav-link">
+                        <i class="ri-community-line"></i>
+                        <span>Community</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">
+                        <i class="ri-article-line"></i>
+                        <span>Blog</span>
+                    </a>
+                </li>
+
+                   <li class="nav-item">
+                       <a href="project.html" class="nav-link active-link">
+                        <i class="ri-layout-2-fill"></i>
+                           <span> Projects </span>
+                       </a>
+                   </li>
+
+                   
+               </ul>
+           </div>
+
+           <div class="nav-actions">
+                
+               <!-- theme button -->
+               <!-- <i class="ri-moon-line change-theme" id="theme-button"></i> -->
+               <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+           </div>
+
+    </nav>
+ </header>
+ <!--============================== main start  ===================================-->
+<main class="main">
+     <!-- ===================== PROJECTS ================================== -->
+     <section class="project-detail section container" >
+       <div class="project-details">
+         <div class="project-header">
+
+            <div class="project-img-row">
+                <img src="images/projects (1).png" alt="">
+                <div>
+                    <h2 class="heading"> E-Commerce Website</h2>
+                    <span></span>
+                </div>
+            </div>
+            <button class="button-g-btn" onclick="document.getElementById('registration-section').scrollIntoView({ behavior: 'smooth' })">Apply Now</button>
+         </div>
+     <section class="features container sec-space">
+
+        <div class="fe-box">
+            <div>
+                <img src="images/persons (1).png" alt="">
+                <h3>Team Size </h3>
+                <p>15 persons</p>
+            </div>
+            <div>
+                <img src="images/time.png" alt="">
+                <h3>Time </h3>
+                <p>4 Weeks </p>
+            </div>
+            <div>
+                <img src="images/location.png" alt="">
+                <h3> Location </h3>
+                <p> OnSite </p>
+            </div>
+            <div>
+                <img src="images/projectstatus.png" alt="">
+                <h3>Project Phase</h3>
+                <p> UpComing </p>
+            </div>
+        </div>
+
+      </section>
+      <div class="project-description sec-space">
+        <h3> Project Description:</h3>
+       <p>The E-Commerce Website is a fully functional online store platform designed to provide users with a seamless shopping experience. The website features a comprehensive product catalog, allowing users to browse through various categories, view detailed product descriptions, and add items to their cart. The app supports essential e-commerce functionality such as searching, filtering, sorting products, and managing the cart.The project focuses on creating a smooth and responsive interface, ensuring optimal user experience across devices. The backend integration (optional) allows for user authentication, secure checkout, and order tracking, providing a complete shopping solution</p>
+
+       <h3> Key Features</h3>
+        <p>
+            <span>Product Catalog: </span> A wide range of products categorized and organized for easy navigation.<br>
+            <span>Search and Filter:</span> Users can search for specific products and apply filters like price range, categories, and ratings.
+            <br> <span>Product Details:</span> Each product has a dedicated page with images, detailed descriptions, pricing, and reviews.
+            <br><span> Shopping Cart:</span>  Users can add products to their cart, adjust quantities, and proceed to checkout.
+           <br><span></span>
+           <br><span>Responsive Design:</span> Optimized for mobile, tablet, and desktop devices for a consistent user experience.</p>
+
+        <h3> Technologies:</h3>
+        <p> <span>Frontend: </span> HTML, CSS, JavaScript<br>
+            <span>Database:</span> (Optional) MongoDB or MySQL (for storing product data and user information)  <br><span>Payment Integration:</span>(Optional) PayPal,Stripe, or any secure payment gateway.
+            <br>Bootstrap for responsive layout.<br>
+            <span>Backend: </span>  (Optional) Node.js, Express (for managing user sessions, payments, etc.)</p>
+    
+      </div>
+       </div>
+
+     </section>
+
+<!-- ============ Registration for project -->
+<section class="rating-review" id="registration-section">
+  <h1> Want to Register for this project?</h1>
+
+  <form id="review-form">
+    <label for="name" class="heading-rate">Your Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+    <label for="email" class="heading-rate">Your Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your E-Mail" required><br><br>
+
+    <label for="number" class="heading-rate">Your Phone Number :</label>
+    <input type="text" id="phone" name="phone" placeholder="Enter your number" required><br><br>
+
+    <!-- Multi-select for languages -->
+    <label for="languages" class="heading-rate">Languages You can work on:</label>
+    <select id="languages" name="languages" multiple size="5" required>
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="javascript">JAVASCRIPT</option>
+      <option value="react">REACT</option>
+      <option value="php">PHP</option>
+      <option value="python">PYTHON</option>
+    </select>
+    <p>Hold down the Ctrl (Windows) or Command (Mac) button to select multiple options.</p><br><br>
+
+      <button id="submit-review-btn" class="button" type="submit"> Submit  </button>
+  </form>
+  </section>
+  <!-- ======== POPUP====================== -->
+   <!-- Popup Modal -->
+<div id="popup" class="popup-modal">
+  <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <p>Your project request has been submitted!</p>
+  </div>
+</div>
+    
+      <!-- =================== main close  -->
+</main>
+      <!--=========================================== FOOTER ===========================================================================-->
+    <footer class="footer">
+        <div class="footer-container container grid">
+           <div>
+               <a href="#" class="footer-logo">
+                <i class="ri-code-s-slash-line"></i>NerdNest-Community
+               </a>
+
+               <p class="footer-description">
+                   Give your valuable reviews and explore  <br>
+                   the best eBooks from all your <br>
+                   favorite writers.
+               </p>
+           </div>
+
+           <div class="footer-data grid">
+
+               <div>
+                        <h3 class="footer-title"> About </h3>
+                       <ul class="footer-links">
+                         <li>
+                             <a href="#" class="footer-link">Membership</a>
+                         </li>
+     
+                         <li>
+                             <a href="#" class="footer-link">FAQs</a>
+                         </li>
+                         <li>
+                           <a href="#" class="footer-link"> Privacy policy</a>
+                       </li>
+
+                         <li>
+                             <a href="#" class="footer-link">Terms of services</a>
+                         </li>
+                       </ul>
+             </div>
+
+             <div>
+               <h3 class="footer-title">Community </h3>
+              <ul class="footer-links">
+                <li>
+                    <a href="#" class="footer-link"> Feedback</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link"> Help center</a>
+                </li>
+              </ul>
+           </div>
+
+              <div>
+                       <h3 class="footer-title">Contact</h3>
+                        <ul class="footer-links">
+                      <li>
+                       <address class="footer-info">
+                           Gulshan e Iqbal  <br>
+                           Karachi 4321, Pakistan
+                       </address>
+                    </li>
+                    <li>
+                       <address class="footer-info">
+                           e.book@email.com <br>
+                           0987-654-321
+                       </address>
+                    </li>
+                  </ul>
+             </div>
+
+             <div>
+               <h3 class="footer-title">Socials </h3>
+             <div class="footer-social">
+               <a href="https://www.instagram.com/rehmattk24?igsh=MTQxcGtxOTduN2o4ZQ==" target="_blank"  class="footer-social-link">
+                   <i class="ri-instagram-line"></i>
+               </a>
+               <a href=" https://snapchat.com/t/L6rxQXdd" target="_blank"  class="footer-social-link">
+                   <i class="ri-snapchat-line"></i>
+               </a>
+               <a href="https://pin.it/3Z0qC63Vk" target="_blank"  class="footer-social-link">
+                   <i class="ri-pinterest-fill"></i>
+               </a>
+             </div>
+           </div>
+
+           </div>
+        </div>
+        <span class="footer-copy">
+           &#169; All Rights Reserved By Rehmat & Hira
+        </span>
+     </footer>
+ <!-- =====options =========== -->
+ <script>
+  const select = document.getElementById('languages');
+
+  select.addEventListener('change', function() {
+      const options = select.options;
+      for (let i = 0; i < options.length; i++) {
+          if (options[i].selected) {
+              options[i].style.backgroundColor = '#d4a5ff'; // Light purple
+              options[i].style.color = '#fff'; // White text
+          } else {
+              options[i].style.backgroundColor = ''; // Reset to default
+              options[i].style.color = ''; // Reset to default
+          }
+      }
+  });
+</script>
+
+     <!--========== SCROLL UP ==========-->
+     <a href="#" class="scrollup" id="scroll-up">
+       <i class="ri-arrow-up-line"></i>
+     </a>
+    <!-- ---- scrolll reveal from guide  -->
+     <script src="https://unpkg.com/scrollreveal"></script>
+     <!--=============== SCROLLREVEAL ===============-->
+     <script src="scrollreveal.min.js"></script>
+
+     <!--=============== SWIPER JS ===============-->
+     <script src="swiper-bundle.min.js"></script>
+
+     <!--=============== MAIN JS ===============-->
+     <script src="script.js"></script>
+     <script src="registeration.js"></script>
+    
+</body>
+</html>

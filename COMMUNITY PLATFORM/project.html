@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="images/logo/2.png" type="image/x-icon">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+    <!-- FONT AWESOME CDNJS LINK-->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> -->
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="styles.css">
+    <title>Projects</title>
+</head>
+<body>
+    <!--==================== HEADER ====================-->
+   <header class="header" id="header">
+    <nav class="nav container">
+       <a href="#" class="nav-logo">
+        <i class="ri-code-s-slash-line"></i>Nerd-Nest
+       </a>
+
+           <div class="nav-menu">
+               <ul class="nav-list">
+
+                   <li class="nav-item">
+                       <a href="index.html" class="nav-link ">
+                        <i class="ri-home-2-line"></i>
+                           <span>Home </span>
+                       </a>
+                   </li>
+
+                   <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <i class="ri-file-info-line"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="membership.html" class="nav-link">
+                        <i class="ri-community-line"></i>
+                        <span>Community</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">
+                        <i class="ri-article-line"></i>
+                        <span>Blog</span>
+                    </a>
+                </li>
+
+                   <li class="nav-item">
+                       <a href="project.html" class="nav-link active-link">
+                        <i class="ri-layout-2-fill"></i>
+                           <span> Projects </span>
+                       </a>
+                   </li>
+
+                   
+               </ul>
+           </div>
+
+           <div class="nav-actions">
+               <!-- search button -->
+               <i class="ri-search-2-line search-button " id="search-button"></i>
+
+               <!-- -----login button -->
+               <i class="ri-user-3-line login-button" id="login-button"></i>
+
+               <!-- theme button -->
+               <!-- <i class="ri-moon-line change-theme" id="theme-button"></i> -->
+               <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+           </div>
+
+    </nav>
+ </header>
+
+ <!--==================== SEARCH ====================-->
+ <div class="search" id="search-content">
+    <form action="" class="search-form">
+       <i class="ri-search-2-line search-icon"></i>
+       <input type="search" placeholder="What are you looking for?" class="search-input">
+    </form>
+    <i class="ri-close-line search-close" id="search-close"></i>
+ </div>
+     <!--==================== LOGIN ====================-->
+<!--==================== LOGIN ====================-->
+<div class="login grid" id="login-content">
+    <!-- Login Form (User) -->
+    <form action="" class="login-form grid input-group" id="login-form">
+        <div class="login-group grid">
+            <div>
+                <label for="login-email-user" class="login-label">Email</label>
+                <input type="email" class="login-input" placeholder="Write your email" id="login-email-user" required>
+            </div>
+            <div>
+                <label for="login-password-user" class="login-label">Password</label>
+                <input type="password" class="login-input" placeholder="Enter your password" id="login-password-user" required>
+            </div>
+        </div>
+        <div>
+            <span class="login-signup">
+                Are you an Author? <a href="index.html">Sign In</a>
+            </span>
+
+            <a href="index.html" class="login-forgot">Login as Author</a>
+
+            <button type="submit" class="login-button button">Log In</button>
+        </div>
+    </form>
+
+    <i class="ri-close-circle-line login-close" id="login-close"></i>
+</div>
+     <!-- ===================== PROJECTS ================================== -->
+     <section class="project container" id="projects">
+        <h2 class="section-title">
+           PROJECTS 
+        </h2>
+        <p>Showcasing dynamic and innovative web development projects, from responsive design to interactive user experiences.</p>
+
+        <ul class="project-id">
+            <li data-target="all" class="active"> All Projects  </li>
+            <li data-target="ongoing"> Ongoing  </li>
+            <li data-target="upcoming"> upcoming  </li>
+            <li data-target="previous"> Previous  </li>
+        </ul>
+
+        <div class="project-container">
+            <li data-item="upcoming" 
+                class="jlist" >
+                <img src="images/3.png" alt="">
+                <a href="weather.html" class="post-title">
+                    Weather Dashboard
+                </a>
+                <p>2-4 persons</p>
+                <span id="key"> Upcoming </span>
+            </li>
+
+            <li data-item="ongoing" 
+                class="jlist" >
+            <img src="images/4.png" alt="">
+            <a href="todolist.html" class="post-title">
+                To-Do List App
+            </a>
+            <p>2 persons</p>
+            <span id="key"> Ongoing </span>
+            </li>
+
+            <li data-item="previous" 
+                class="jlist" >
+            <img src="images/2.png" alt="">
+            <a href="portfolio.html" class="post-title">
+                Portfolio Website
+            </a>
+            <p>3 persons</p>
+            <span id="key">Previous </span>
+            </li>
+
+            <li data-item="upcoming" 
+                class="jlist" >
+            <img src="images/projects (1).png" alt="">
+            <a href="ecommerce.html" class="post-title">
+                E-commerce Website
+            </a>
+            <p>15 persons</p>
+            <span id="key"> Upcoming </span>
+            </li>
+
+            <li data-item="previous" 
+            class="jlist" >
+           <img src="images/5.png" alt="">
+            <a href="game.html" class="post-title">
+              Game Development
+            </a>
+            <p>10-12 persons</p>
+            <span id="key"> Previous </span>
+            </li>
+
+            
+            <li data-item="ongoing" 
+                class="jlist" >
+            <img src="images/music.png" alt="">
+            <a href="music.html" class="post-title">
+                Music Player 
+            </a>
+            <p>1 persons</p>
+            <span id="key"> Ongoing </span>
+            </li>
+
+        </div>
+ </section>
+  <!--=========================================== FOOTER ===========================================================================-->
+  <footer class="footer">
+    <div class="footer-container container grid">
+       <div>
+           <a href="#" class="footer-logo">
+            <i class="ri-code-s-slash-line"></i>NerdNest-Community
+           </a>
+
+           <p class="footer-description">
+               Give your valuable reviews and explore  <br>
+               the best eBooks from all your <br>
+               favorite writers.
+           </p>
+       </div>
+
+       <div class="footer-data grid">
+
+           <div>
+                    <h3 class="footer-title"> About </h3>
+                   <ul class="footer-links">
+                     <li>
+                         <a href="#" class="footer-link">Membership</a>
+                     </li>
+ 
+                     <li>
+                         <a href="#" class="footer-link">FAQs</a>
+                     </li>
+                     <li>
+                       <a href="#" class="footer-link"> Privacy policy</a>
+                   </li>
+
+                     <li>
+                         <a href="#" class="footer-link">Terms of services</a>
+                     </li>
+                   </ul>
+         </div>
+
+         <div>
+           <h3 class="footer-title">Community </h3>
+          <ul class="footer-links">
+            <li>
+                <a href="#" class="footer-link"> Feedback</a>
+            </li>
+
+            <li>
+                <a href="#" class="footer-link"> Help center</a>
+            </li>
+          </ul>
+       </div>
+
+          <div>
+                   <h3 class="footer-title">Contact</h3>
+                    <ul class="footer-links">
+                  <li>
+                   <address class="footer-info">
+                       Gulshan e Iqbal  <br>
+                       Karachi 4321, Pakistan
+                   </address>
+                </li>
+                <li>
+                   <address class="footer-info">
+                       e.book@email.com <br>
+                       0987-654-321
+                   </address>
+                </li>
+              </ul>
+         </div>
+
+         <div>
+           <h3 class="footer-title">Socials </h3>
+         <div class="footer-social">
+           <a href="https://www.instagram.com/rehmattk24?igsh=MTQxcGtxOTduN2o4ZQ==" target="_blank"  class="footer-social-link">
+               <i class="ri-instagram-line"></i>
+           </a>
+           <a href=" https://snapchat.com/t/L6rxQXdd" target="_blank"  class="footer-social-link">
+               <i class="ri-snapchat-line"></i>
+           </a>
+           <a href="https://pin.it/3Z0qC63Vk" target="_blank"  class="footer-social-link">
+               <i class="ri-pinterest-fill"></i>
+           </a>
+         </div>
+       </div>
+
+       </div>
+    </div>
+    <span class="footer-copy">
+       &#169; All Rights Reserved By Rehmat & Hira
+    </span>
+ </footer>
+ <script>
+    /*========================== DARK LIGHT THEME =================================*/ 
+   
+   
+    document.addEventListener('DOMContentLoaded', () => {
+        const themeButton = document.getElementById('theme-button')
+        const darkTheme = 'dark-theme'
+        const iconTheme = 'ri-sun-line'
+    
+        // Previously selected theme (if user selected)
+        const selectedTheme = localStorage.getItem('selected-theme')
+        const selectedIcon = localStorage.getItem('selected-icon')
+    
+        // Function to get the current theme and icon
+        const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+        const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
+    
+        // Validate if the user previously chose a theme
+        if (selectedTheme) {
+            document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+            themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
+        }
+    
+        // Toggle between light and dark themes
+        themeButton.addEventListener('click', () => {
+            console.log('Button clicked')
+            document.body.classList.toggle(darkTheme)
+            themeButton.classList.toggle(iconTheme)
+    
+            // Save the theme and current icon that the user chooses
+            localStorage.setItem('selected-theme', getCurrentTheme())
+            localStorage.setItem('selected-icon', getCurrentIcon())
+        })
+    })
+   </script>
+   <script>// =============================== PROJECTS ==================
+       const sortBtns = document.querySelectorAll(".project-id > *")
+       const sortItems = document.querySelectorAll(".project-container > *")
+           sortBtns.forEach((btn) =>{
+               btn.addEventListener('click',() =>{
+                   sortBtns.forEach((btn) => btn.classList.remove
+                   ("active")) ;
+                   btn.classList.add("active");
+       
+                   const targetData = btn.getAttribute("data-target");
+                   sortItems.forEach((item) =>{
+                       item.classList.add("delete");
+                       if(item.getAttribute("data-item")  === targetData  || targetData === "all"
+                                   ){
+                                       item.classList.remove("delete");
+                                   }
+       
+                   });
+               });
+           });
+           
+           /*=============== LOGIN ===============*/
+   const loginButton = document.getElementById('login-button'),
+   loginClose  = document.getElementById('login-close'),
+   loginContent = document.getElementById('login-content')
+   
+   //   .........    menu show
+   // validate if contant exists 
+   if(loginButton){
+     loginButton.addEventListener('click', () =>{
+         loginContent.classList.add('show-login')
+     })
+   }
+   
+   // -----------menu hidden 
+   // validate if contant close
+   if(loginButton){
+     loginClose.addEventListener('click', () =>{
+         loginContent.classList.remove('show-login')
+     })
+   }
+
+
+   /*=============== SEARCH ===============*/
+const searchButton = document.getElementById('search-button'),
+      searchClose  = document.getElementById('search-close'),
+      searchContent = document.getElementById('search-content')
+
+    //   .........    menu show
+    // validate if contant exists 
+    if(searchButton){
+        searchButton.addEventListener('click', () =>{
+            searchContent.classList.add('show-search')
+        })
+    }
+
+    // -----------menu hidden 
+    // validate if contant close
+    if(searchClose){
+        searchClose.addEventListener('click', () =>{
+            searchContent.classList.remove('show-search')
+        })
+    }
+           </script>
+    <script src="script.js"></script>
+</body>
+</html>

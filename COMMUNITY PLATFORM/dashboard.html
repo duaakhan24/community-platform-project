@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - NerdNest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--=============== REMIXICONS ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <style>
+      /* ROOT starts*/
+      /*  google font import  */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500&family=Montserrat:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(292, 38%, 49%);
+  --title-color: hsl(282, 91%, 35%);
+  --text-color: hsl(230, 16%, 45%);
+  --border-color: hsl(230, 50%, 90%);
+  --white-color: hsl(0, 0%, 100%);
+  --body-color: hsl(230, 100%, 96%);
+  --container-color: hsl(230, 100%, 97%);
+  --dark-text:black;
+  --max-width:1200px;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --second-font: "Montagu Slab", serif;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --biggest-font-size: 3.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+/* ROOT ends */
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color:  hsla(231, 100%, 96%, 0.705);
+  color: var(--text-color);
+  transition: background-color .4s;
+}
+        /* General Styles */
+         
+         /* header starts */
+          /*=============== HEADER & NAV ===============*/
+  .header{
+      position:sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--body-color);
+      z-index: var(--z-fixed);
+      transition: box-shadow .4s, background-color .4s;
+  }
+  .nav{
+      height: var(--header-height);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+  }
+  .nav-logo{
+      display: inline-flex;
+      align-items: center;
+      column-gap: .5rem;
+      font-size: 1.5rem;
+      color: var(--first-color);
+      font-weight: var(--font-medium);
+      margin-left: 20px;
+  }
+  .nav-logo i{
+      font-size: 2rem;
+  }
+  #theme-button {
+    margin-right: 20px;
+    font-size: 1.2rem;
+    color: var(--first-color);
+  }
+   /* Add shadow header */
+.shadow-header{
+    box-shadow: 0 2px  16px hsla(0, 0%, 0%, .1);
+}
+  /* Dark Theme Styles */
+.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-theme .header {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.dark-theme .sidebar {
+    background-color: #1e1e1e;
+}
+ 
+.dark-theme .projects-section {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+.dark-theme .projects-section h1 {
+  color:hsl(292, 38%, 49%);
+}
+.dark-theme .projects h3{
+  font-size: 20px;
+  color:    hsl(292, 38%, 49%);
+}
+.dark-theme .activity-card{
+   background-color: #2c2c2c;
+   border: 2px solid hsl(292, 38%, 49%);
+}
+.dark-theme .activity-card h4{
+  color:  hsl(292, 38%, 49%);
+}
+.dark-theme .activities h3{
+   color:  hsl(292, 38%, 49%);
+}
+.dark-theme .activities p{
+  color:   hsl(292, 38%, 49%);
+}
+.dark-theme .unchanged-section {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+
+.dark-theme .progress-bar {
+    background-color: #444;
+}
+
+.dark-theme .progress-bar-fill {
+    background-color:  hsl(292, 38%, 49%);
+}
+.dark-theme .sidebar a{
+  color: var(--body-color);
+}
+.dark-theme .sidebar a:hover {
+    color:   hsl(282, 91%, 35%);
+}
+
+  /* Navigation for mobile devices */
+@media screen and (max-width:1150px ) {
+  .nav-actions{
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+}
+.nav-actions i{
+    font-size: 1.25rem;
+    color: var(--title-color);
+    cursor: pointer;
+    transition: color .4s;
+}
+.nav-actions  i:hover{
+    color: var(--first-color);
+}
+}
+         /* header ends */
+         /* NOTIFICATIONS STARTS */
+          /* Notification icon styling */
+.notification-icon {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.notification-icon i {
+  font-size: 1.2rem;
+  color: var(--first-color);
+  padding: 0; /* Remove padding to avoid box shape */
+  margin-right:5px; /* Ensure no margin is added */
+  display: inline-block; /* Make sure the icon stays inline */
+ 
+}
+ 
+
+/* Notification dropdown styling */
+.notification-dropdown {
+  display: none; /* Initially hidden */
+  position: absolute;
+  right: 0;
+  background-color: var(--body-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  width: 250px;
+  z-index: 1000;
+}
+
+.notification-dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-dropdown li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.notification-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.notification-dropdown a {
+  text-decoration: none;
+  color: #333;
+}
+
+.notification-dropdown a:hover {
+  color: #4a4a8e;
+}
+
+/* When the dropdown is active */
+.notification-dropdown.active {
+  display: block;
+}
+.dark-theme .notification-dropdown{
+  background-color:  #2c2c2c;
+}
+.dark-theme .notification-dropdown a{
+  color: #ddd;
+}
+
+/* Responsive dropdown */
+@media (max-width: 768px) {
+  .notification-dropdown {
+    width: 200px;
+  }
+}
+         /* NOTIFICATIONS ENDS */
+         
+        /* Sidebar */
+           /* Base Sidebar Styles for Larger Screens */
+.sidebar {
+    width: 60px;
+    height: 100%;
+    background-color: var(--body-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;  
+    top: 60px; /* Start below the navbar */
+    left: 0; /* Default: Align with the left */
+    transition: all 0.3s ease; /* Smooth transition for position */
+}
+
+.sidebar a {
+    padding: 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 24px;
+    display: block;
+}
+
+.sidebar a:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 65px;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar a::after {
+    content: '';
+    position: absolute; 
+    left: 65px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: hsl(282, 91%, 35%);
+}
+
+/* Responsive styling for screen widths from 576px to 786px */
+@media (max-width: 786px) and (min-width: 576px) {
+    .sidebar {
+        position: fixed;
+        top: auto;  /* Reset top to auto */
+        bottom: 0; /* Place at the bottom of the screen */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Ensure it's perfectly centered */
+        width: 80%;  /* Smaller width to create space from left and right */
+        height: 60px; /* Slightly larger height */
+        background-color: var(--body-color);
+        flex-direction: row; /* Align items horizontally */
+        justify-content: space-around; /* Space icons evenly */
+         
+    }
+
+    .sidebar a {
+        padding: 10px; /* Adjust padding to fit icons */
+    }
+}
+
+/* For screens smaller than 576px - FULL WIDTH BOTTOM SIDEBAR */
+@media (max-width: 576px) {
+    .sidebar {
+        position: fixed;
+        top: auto;  /* Ensure top is auto */
+        bottom: 0; /* Place at the bottom of the screen */
+        left: 0; /* Full width */
+        width: 100%; /* Full width across the bottom */
+        height: 60px; /* Slightly larger height */
+        background-color: var(--body-color);
+        flex-direction: row; /* Align items horizontally */
+        justify-content: space-around; /* Space icons evenly */
+        border-radius: 0; /* No border radius, take the full bottom */
+    }
+
+    .sidebar a {
+        padding: 10px; /* Adjust padding to fit icons */
+    }
+}
+
+
+        /* Dashboard content */
+        .dashboard-content {
+          margin-left: 70px; /* Push content to the right by the sidebar width */
+          width: calc(100% - 70px); /* Adjust the width so it doesn't overlap the sidebar */
+          padding: 20px 20px 80px;
+          display: flex;
+          flex-direction: column;
+           
+}
+
+        /* Center part */
+        .center-part {
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 0; 
+        }
+
+        /* Projects Section */
+        .projects-section {
+            background-color: #fff;
+            padding: 20px;
+            width: 70%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects-section h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+          /* STATS overview starts */
+          /* Stats Overview */
+.stats-overview {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  flex-wrap:wrap;
+  
+}
+
+.stat-box {
+  background:   hsl(292, 38%, 49%);
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 28%;
+  min-width: 250px;
+  margin: 5px;
+  display: flex;  
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+}
+ 
+.stat-box i {
+  font-size: 26px; /* Adjusted icon size */
+  margin-bottom: 10px;
+}
+
+.stat-box h3 {
+   
+  font-size: 16px;
+}
+
+.stat-box p {
+   
+  margin-top: 10px;
+  font-size: 14px;
+}
+/* Stats overciew ends */
+              
+              /* .projects-section starts*/
+              /* Projects */
+.projects {
+  margin-top: 10px;
+}
+
+.projects h3 {
+  font-size: 20px;
+  color:   #606785;
+}
+
+.project-card {
+  background:   hsl(292, 38%, 49%);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.project-card .status {
+  font-weight: bold;
+}
+
+.project-card .status.ongoing {
+  color: #2ecc71;
+}
+
+.project-card .status.completed {
+  color: #e74c3c;
+}
+
+          /* projects-section ends */
+          /* Activities */
+.activities {
+  margin-top: 10px;
+}
+
+.activities h3 {
+  font-size: 22px;
+  color: #606785;
+}
+
+.activity-card {
+  background: #ecf0f1;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: 2px solid hsl(292, 38%, 49%);
+}
+
+.activity-card h4 {
+  color: #2f3640;
+  font-size: 18px;
+}
+.dark-theme .activity-card h4{
+  color: hsl(292, 50%, 77%);
+}
+.dark-theme .activity-card h3{
+  color: hsl(292, 38%, 49%);
+}
+
+.activity-time {
+  font-size: 12px;
+  color: #7f8c8d;
+}
+
+        /* Unchanged section */
+        .unchanged-section {
+            height: 200%;
+            background-color: #e0e0e0;
+            width: 25%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .user-field {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .courses-progress {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .progress-bar-container {
+            margin-bottom: 15px;
+        }
+
+        .progress-bar-label {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: #a9a2a2b1;
+            border-radius: 10px;
+            overflow: hidden;
+             
+}
+        
+
+        .progress-bar-fill {
+            height: 10px;
+            background-color:  hsl(282, 91%, 35%);
+            width: 0%; /* Initial width */
+            animation: fillProgress 2s ease-in-out forwards; /* Animation */
+}
+        /* Define the keyframes for progress fill animation */
+@keyframes fillProgress {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%; /* This will be overridden by the specific progress class */
+    }
+}
+
+/* Progress percentage for specific bars */
+.html-progress {
+    animation: fillProgressHtml 2s ease-in-out forwards;
+}
+
+.css-progress {
+    animation: fillProgressCss 2s ease-in-out forwards;
+}
+
+.js-progress {
+    animation: fillProgressJs 2s ease-in-out forwards;
+}
+
+/* Individual keyframes for specific percentages */
+@keyframes fillProgressHtml {
+    from { width: 0%; }
+    to { width: 90%; }
+}
+
+@keyframes fillProgressCss {
+    from { width: 0%; }
+    to { width: 80%; }
+}
+
+@keyframes fillProgressJs {
+    from { width: 0%; }
+    to { width: 70%; }
+}
+
+        .html-progress { width: 90%; }
+        .css-progress { width: 80%; }
+        .js-progress { width: 70%; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+              .stat-box{
+                min-width: 138px;
+              } 
+               
+            .projects-section, .unchanged-section {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .center-part {
+                flex-direction: column-reverse;
+            }
+
+            .dashboard-content {
+                margin-left: 0;
+            }
+        }
+
+
+         
+  @media (max-width: 768px) {
+    .dashboard-content {
+        margin-left: 0; /* Remove margin for mobile view */
+        width: 100%; /* Take full width */
+    }
+
+    .projects-section, .unchanged-section {
+        width: 100%; /* Ensure both sections take full width */
+        margin-bottom: 20px; /* Add margin for spacing */
+    }
+    .center-part {
+        
+        flex-direction: column-reverse; /* Stack elements vertically */
+    }
+}
+ 
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a class="nav-logo">
+        <i class="ri-code-s-slash-line"></i>Nerd-Nest
+       </a>
+      <div class="nav-actions">
+        <div class="notification-icon">
+          <i class="fa-regular fa-bell" id="notification-icon"></i>
+          <div class="notification-dropdown" id="notification-dropdown">
+            <ul>
+              <li><a href="#"><b>New Project</b>:<br> Weather Dashboard</a></li>
+              <li><a href="#">Maintenance Update</a></li>
+              <li><a href="#">5 New Messages</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- theme button -->
+        <!-- <i class="ri-moon-line change-theme" id="theme-button"></i> -->
+        <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+    </div>
+
+</nav>
+</header>
+      
+
+
+    <!-- Sidebar with icons and hover tooltips -->
+     
+    <div class="sidebar">
+      <a href="index.html" data-tooltip="Home" class="nav-link active-link">
+        <i class="ri-home-2-line"></i></a>
+        <a href="about.html" data-tooltip="About" class="nav-link">
+          <i class="ri-file-info-line"></i></a>
+          <a href="membership.html" data-tooltip="Community" class="nav-link">
+            <i class="ri-community-line"></i></a>
+            <a href="blog.html"data-tooltip= "Blog" class="nav-link">
+              <i class="ri-article-line"></i></a>
+              <a href="project.html" data-tooltip="Projects" class="nav-link">
+                <i class="ri-layout-2-fill"></i></a>
+        
+    </div>
+       
+    <!-- Main dashboard content -->
+    <div class="dashboard-content">
+        
+
+        <div class="center-part">
+            <!-- Projects Section -->
+            <div class="projects-section">
+              <h1>Welcome to Your Dashboard</h1>
+              <br>
+              <p>Welcome back, Dora! Here's your activity summary.</p>
+                <!-- Add your projects content here -->
+
+                 <!-- Stats Overview Section -->
+      <section class="stats-overview">
+        <div class="stat-box">
+          <i class="fas fa-book-open"></i>
+          <h3>Posts</h3>
+          <p>12 Active Posts</p>
+        </div>
+        <div class="stat-box">
+          <i class="fas fa-clipboard-list"></i>
+          <h3>Projects</h3>
+          <p>5 Ongoing Projects</p>
+        </div>
+        <div class="stat-box">
+          <i class="fas fa-users"></i>
+          <h3>Followers</h3>
+          <p>120 Followers</p>
+        </div> 
+        <div class="stat-box">
+            <i class="ri-file-list-3-line"></i>
+            <h3>Articles Posted</h3>
+            <p>12</p>
+        </div>
+        
+      </section>
+
+      <!-- Project Status Section -->
+      <section class="projects">
+        <h3>Your Projects</h3>
+        <br>
+        <p>Here you can manage your ongoing projects and add new ones. Stay updated with all your work.</p>
+        <div class="project-card">
+          <h4>Portfolio Redesign</h4>
+          <p>Status: <span class="status ongoing">Ongoing</span></p>
+        </div>
+        <div class="project-card">
+          <h4>Community Platform</h4>
+          <p>Status: <span class="status completed">Completed</span></p>
+        </div>
+      </section>
+      <!-- Recent Activities Section -->
+      <section class="activities">
+        <h3>Recent Activities</h3>
+        <div class="activity-card">
+          <h4>Published Blog Post</h4>
+          <p>“How to Build a Full-Stack App”</p>
+          <span class="activity-time">2 days ago</span>
+        </div>
+        <div class="activity-card">
+          <h4>Started New Project</h4>
+          <p>“AI-Powered Chatbot Development”</p>
+          <span class="activity-time">5 days ago</span>
+        </div>
+      </section>
+            </div>
+             
+            <!-- Unchanged Section with profile and progress bars -->
+            <div class="unchanged-section">
+                <img src="images/pfp.avif" alt="Profile Picture" class="profile-pic">
+                <div class="user-field">Web Developer</div>
+
+                <div class="courses-progress">
+                    <h3>Courses Progress</h3>
+
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-label">HTML</div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill html-progress"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-label">CSS</div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill css-progress"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-label">JavaScript</div>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill js-progress"></div>
+                        </div>
+                    </div>
+                </div>
+                  
+            </div>
+        </div>
+    </div>
+
+
+
+   
+    
+  <!-- js -->
+   <script> 
+    /*=============== ADD SHADOW HEADER ===============*/
+const shadowHeader =() =>{
+    const header = document.getElementById('header') 
+    //when the scroll is greater than 50 viewport height, add the 
+    this.scrollY >= 50 ? header.classList.add('shadow-header')
+                       : header.classList.remove('shadow-header')
+}
+window.addEventListener('scroll',shadowHeader)
+
+
+     /*========================== DARK LIGHT THEME =================================*/ 
+
+
+     document.addEventListener('DOMContentLoaded', () => {
+    const themeButton = document.getElementById('theme-button');
+    const darkTheme = 'dark-theme';
+    const iconTheme = 'ri-sun-line'; // Icon for the light theme
+
+    // Previously selected theme (if user selected)
+    const selectedTheme = localStorage.getItem('selected-theme');
+    const selectedIcon = localStorage.getItem('selected-icon');
+
+    // Function to get the current theme and icon
+    const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+    const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : iconTheme;
+
+    // Validate if the user previously chose a theme
+    if (selectedTheme) {
+        document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+        themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme);
+    }
+
+    // Toggle between light and dark themes
+    themeButton.addEventListener('click', () => {
+        document.body.classList.toggle(darkTheme);
+        themeButton.classList.toggle(iconTheme);
+
+        // Save the theme and current icon that the user chooses
+        localStorage.setItem('selected-theme', getCurrentTheme());
+        localStorage.setItem('selected-icon', getCurrentIcon());
+    });
+});
+
+
+ 
+    document.addEventListener("DOMContentLoaded", function() {
+        // Function to shorten text
+        function truncateText(element, maxLength) {
+            let originalText = element.textContent;
+            if (originalText.length > maxLength) {
+                let truncated = originalText.substring(0, maxLength) + "...";
+                element.textContent = truncated;
+            }
+        }
+
+        // Apply the function to all notification h4 and h2 headings
+        const headings = document.querySelectorAll(".notification-card h4, .notification-section h2");
+        
+        headings.forEach(function(heading) {
+            if (heading.tagName === "H4") {
+                truncateText(heading, 30);  // Shorten h4 headings to 30 characters
+            } else if (heading.tagName === "H2") {
+                truncateText(heading, 20);  // Shorten h2 headings to 20 characters
+            }
+        });
+    });
+ 
+     // Toggle the dropdown visibility on icon click
+document.getElementById("notification-icon").addEventListener("click", function(event) {
+    event.stopPropagation();  // Prevent the click from bubbling up to the document
+    var dropdown = document.getElementById("notification-dropdown");
+    dropdown.classList.toggle("active");
+});
+
+// Close the dropdown when clicking outside
+document.addEventListener("click", function(event) {
+    var dropdown = document.getElementById("notification-dropdown");
+    var icon = document.getElementById("notification-icon");
+    
+    // Check if the click is outside the dropdown and the notification icon
+    if (!dropdown.contains(event.target) && !icon.contains(event.target)) {
+        dropdown.classList.remove("active");
+    }
+});
+
+const notificationBtn = document.querySelector('.notification-btn');
+const notificationDropdown = document.querySelector('.notification-dropdown');
+
+notificationBtn.addEventListener('click', function () {
+  const isExpanded = notificationBtn.getAttribute('aria-expanded') === 'true';
+  notificationBtn.setAttribute('aria-expanded', !isExpanded);
+  notificationDropdown.style.display = isExpanded ? 'none' : 'block';
+});
+
+// Optional: Close dropdown when clicking outside
+document.addEventListener('click', function (event) {
+  if (!notificationBtn.contains(event.target) && !notificationDropdown.contains(event.target)) {
+    notificationDropdown.style.display = 'none';
+    notificationBtn.setAttribute('aria-expanded', 'false');
+  }
+});
+
+</script>
+
+</body>
+</html>

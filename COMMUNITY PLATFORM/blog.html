@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog/Resource Page</title>
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="images/logo/2.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--=============== REMIXICONS ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include any icon library for share buttons -->
+      
+</head>
+<body>
+     
+          <!--==================== HEADER ====================-->
+   <header class="header" id="header">
+    <nav class="nav container">
+       <a href="#" class="nav-logo">
+        <i class="ri-code-s-slash-line"></i>Nerd-Nest
+       </a>
+
+           <div class="nav-menu">
+               <ul class="nav-list">
+
+                   <li class="nav-item">
+                       <a href="index.html" class="nav-link ">
+                        <i class="ri-home-2-line"></i>
+                           <span>Home </span>
+                       </a>
+                   </li>
+
+                   <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <i class="ri-file-info-line"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="membership.html" class="nav-link">
+                        <i class="ri-community-line"></i>
+                        <span>Community</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link active-link">
+                        <i class="ri-article-line"></i>
+                        <span>Blog</span>
+                    </a>
+                </li>
+
+                   <li class="nav-item">
+                       <a href="project.html" class="nav-link">
+                        <i class="ri-layout-2-fill"></i>
+                           <span> Projects </span>
+                       </a>
+                   </li>
+
+                   
+               </ul>
+           </div>
+
+           <div class="nav-actions">
+               <!-- search button -->
+               <i class="ri-search-2-line search-button " id="search-button"></i>
+
+               <!-- -----login button -->
+               <i class="ri-user-3-line login-button" id="login-button"></i>
+
+               <!-- theme button -->
+               <!-- <i class="ri-moon-line change-theme" id="theme-button"></i> -->
+               <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+           </div>
+           
+
+    </nav>
+     
+ </header>
+ <div class="filter"> 
+    <label for="filter">Search by:</label>
+    <select id="filter" onchange="filterContent()">
+        <option value="all">All</option>
+        <option value="tutorial">Tutorials</option>
+        <option value="article">Articles</option>
+        <option value="blog">Blogs</option>
+    </select>
+</div>
+ <!--==================== SEARCH ====================-->
+ <div class="search" id="search-content">
+    <form action="" class="search-form">
+       <i class="ri-search-2-line search-icon"></i>
+       <input type="search" placeholder="What are you looking for?" class="search-input">
+    </form>
+    <i class="ri-close-line search-close" id="search-close"></i>
+ </div>
+ <!--==================== LOGIN ====================-->
+ <div class="login grid" id="login-content">
+     <!-- Login Form (User) -->
+     <form action="" class="login-form grid input-group" id="login-form">
+         <div class="login-group grid">
+             <div>
+                 <label for="login-email-user" class="login-label">Email</label>
+                 <input type="email" class="login-input" placeholder="Write your email" id="login-email-user" required>
+             </div>
+             <div>
+                 <label for="login-password-user" class="login-label">Password</label>
+                 <input type="password" class="login-input" placeholder="Enter your password" id="login-password-user" required>
+             </div>
+         </div>
+         <div>
+             <span class="login-signup">
+                 Are you an Author? <a href="index.html">Sign In</a>
+             </span>
+ 
+             <a href="index.html" class="login-forgot">Login as Author</a>
+ 
+             <button type="submit" class="login-button button">Log In</button>
+         </div>
+     </form>
+ 
+     <i class="ri-close-circle-line login-close" id="login-close"></i>
+ </div>
+   
+    <div class="blog-resource-page">
+         
+        <!-- Blog/Resource Items -->
+         
+        <section class="featured-articles">
+            <h2>Articles</h2>
+            <div class="articles-container">
+                <div class="article" data-type="article" data-url="https://www.webfx.com/blog/web-design/modern-web-design/">
+                    <img src="images/web-design-trends-NmTNam.webp" alt="Featured Article 1">
+                    <h3><a href="https://www.webfx.com/blog/web-design/modern-web-design/">Understanding Modern Web Design Trends</a></h3>
+                    <p>A deep dive into the latest trends shaping the world of web design...</p>
+                    <div class="actions">
+                        <button class="like-button" onclick="toggleLike(this)">Like</button>
+                        <button class="share-button" onclick="shareArticle(this)">Share</button>
+                    </div> 
+                </div>
+                <div class="article" data-type="article" data-url="https://blog.devgenius.io/mastering-javascript-smart-tips-and-techniques-for-developers-426a3cad27b7">
+                    <img src="images/Js-console.jpg" alt="Featured Article 2">
+                    <h3><a href="https://blog.devgenius.io/mastering-javascript-smart-tips-and-techniques-for-developers-426a3cad27b7">Mastering JavaScript Tips and Tricks</a></h3>
+                    <p>Advanced techniques and best practices for mastering JavaScript...</p>
+                    <div class="actions">
+                        <button class="like-button" onclick="toggleLike(this)">Like</button>
+                        <button class="share-button" onclick="shareArticle(this)">Share</button>
+                    </div>
+                </div>
+                <div class="article" data-type="article" data-url="https://dev.to/codewithshahan/the-future-of-frontend-development-1amd">
+                    <img src="images/3..avif" alt="Featured Article 3">
+                    <h3><a href="https://dev.to/codewithshahan/the-future-of-frontend-development-1amd">The Future of Front-End Development</a></h3>
+                    <p>Exploring upcoming trends and technologies in front-end development...</p>
+                    <div class="actions">
+                        <button class="like-button" onclick="toggleLike(this)">Like</button>
+                        <button class="share-button" onclick="shareArticle(this)">Share</button>
+                    </div> 
+                </div>
+            </div>
+        </section>
+        
+        <!-- Blog Post Previews -->
+        <section class="blog-posts">
+            <h2> Blogs</h2>
+            <div class="posts-container">
+                <div class="post" data-type="blog">
+                    <img src="images/html.jpg" alt="HTML Basics Image">
+                    <h3>Getting Started with HTML: <br>The Building Blocks of the Web</h3>
+                    <p>HTML is the foundation of all web pages. Learn the basics of HTML...<span id="moreContent2" style="display:none;"> Discover how HTML structures web content, how to use tags, and build a simple webpage.</span></p>
+                    <a href="https://www.w3schools.com/html/html_basic.asp" id="readMoreBtn2"><b>Read More</b></a>
+                </div>
+                <div class="post" data-type="blog">
+                    <img src="images/flex.jpg" alt="Post Image">
+                    <h3>Understanding Flexbox: <br>A Beginner's Guide in details</h3>
+                    <p>Flexbox is a powerful layout tool in CSS. This guide covers...<span id="moreContent1" style="display:none;"> Here’s the detailed explanation of Flexbox, including examples and best practices.</span></p>
+                    <a href="https://www.w3schools.com/css/css3_flexbox.asp" id="readMoreBtn1"><b>Read More</b></a>
+                </div>
+                
+                <div class="post" data-type="blog">
+                    <img src="images/js.jpg" alt="JavaScript Essentials Image">
+                    <h3>JavaScript Essentials:<br> Bringing Your Web Pages to Life</h3>
+                    <p>JavaScript adds interactivity to your website. Get started JavaScript...<span id="moreContent3" style="display:none;"> Learn the basics of JavaScript, including variables, functions, and events.</span></p>
+                    <a href="https://www.udemy.com/course/javascript-essentials/" id="readMoreBtn3"><b>Read More</b></a>
+                </div>
+                
+            </div>
+        </section>
+        <!-- Tutorials -->
+        <section class="tutorials">
+            <h1>Tutorials</h1>
+            <h2>Tech Minds</h2>
+            <div class="tutorials-container">
+                
+                <article class="tutorial" data-type="tutorial" id="tutorial-1" data-url="https://www.youtube.com/watch?v=V4yNXP0g3WA">
+                    <div class="video-wrapper">
+                        <iframe width="295" height="180" 
+                            src="https://www.youtube.com/embed/V4yNXP0g3WA?si=QsFNGgdRstpqERL4" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h2><a href="https://www.youtube.com/watch?v=V4yNXP0g3WA">HTML Crash Course</a></h2>
+                    <p>Learn the basics of HTML and how to create your first web page. This tutorial covers essential HTML elements and structure.</p>
+                    
+                    <!-- Like and Share Buttons -->
+                    <button class="like-button" onclick="toggleLike(this)">Like</button>
+                    <button class="share-button" onclick="shareTutorial(this)">Share</button>
+                </article>
+                
+                <article class="tutorial" data-type="tutorial" id="tutorial-2" data-url="https://www.youtube.com/watch?v=B8CQ5JKrkIo">
+                    <div class="video-wrapper">
+                        <iframe width="295" height="180" 
+                                src="https://www.youtube.com/embed/B8CQ5JKrkIo?si=fMAJtjQvRY5mDEtT" 
+                                title="YouTube video player" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <h2><a href="https://www.youtube.com/watch?v=B8CQ5JKrkIo">CSS Crash Course</a></h2>
+                    <p>Understand the core concepts of CSS, including selectors, properties, and how to style your web pages effectively.</p>
+                    <!-- Like and Share Buttons -->
+                    <button class="like-button" onclick="toggleLike(this)">Like</button>
+                    <button class="share-button" onclick="shareTutorial(this)">Share</button>
+                </article>
+                
+                <article class="tutorial" data-type="tutorial" id="tutorial-3" data-url="https://www.youtube.com/watch?v=DZ8voZnicRQ">
+                    <div class="video-wrapper">
+                        <iframe width="295" height="180" 
+                                src="https://www.youtube.com/embed/DZ8voZnicRQ?si=UxN-hZgfInrC-IoO" 
+                                title="YouTube video player" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen></iframe> 
+                    </div>
+                    <h2><a href="https://www.youtube.com/watch?v=DZ8voZnicRQ">JS Crash Course</a></h2>
+                    <p>Get started with JavaScript programming, including variables, functions, and basic scripting for web development.</p>
+                    <!-- Like and Share Buttons -->
+                    <button class="like-button" onclick="toggleLike(this)">Like</button>
+                    <button class="share-button" onclick="shareTutorial(this)">Share</button>
+                </article>
+            </div>
+        </section>
+        <footer>
+            <p> &#169; All Rights Reserved By Rehmat & Hira</p>
+        </footer>
+    </div>
+            
+    
+     
+
+
+    <script>
+
+        
+/*=============== SEARCH ===============*/
+const searchButton = document.getElementById('search-button'),
+      searchClose  = document.getElementById('search-close'),
+      searchContent = document.getElementById('search-content')
+
+    //   .........    menu show
+    // validate if contant exists 
+    if(searchButton){
+        searchButton.addEventListener('click', () =>{
+            searchContent.classList.add('show-search')
+        })
+    }
+
+    // -----------menu hidden 
+    // validate if contant close
+    if(searchClose){
+        searchClose.addEventListener('click', () =>{
+            searchContent.classList.remove('show-search')
+        })
+    }
+
+
+/*=============== ADD SHADOW HEADER ===============*/
+const shadowHeader =() =>{
+    const header = document.getElementById('header') 
+    //when the scroll is greater than 50 viewport height, add the 
+    this.scrollY >= 50 ? header.classList.add('shadow-header')
+                       : header.classList.remove('shadow-header')
+}
+window.addEventListener('scroll',shadowHeader)
+
+
+/*========================== DARK LIGHT THEME =================================*/ 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const themeButton = document.getElementById('theme-button')
+    const darkTheme = 'dark-theme'
+    const iconTheme = 'ri-sun-line'
+
+    // Previously selected theme (if user selected)
+    const selectedTheme = localStorage.getItem('selected-theme')
+    const selectedIcon = localStorage.getItem('selected-icon')
+
+    // Function to get the current theme and icon
+    const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+    const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
+
+    // Validate if the user previously chose a theme
+    if (selectedTheme) {
+        document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+        themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
+    }
+
+    // Toggle between light and dark themes
+    themeButton.addEventListener('click', () => {
+        console.log('Button clicked')
+        document.body.classList.toggle(darkTheme)
+        themeButton.classList.toggle(iconTheme)
+
+        // Save the theme and current icon that the user chooses
+        localStorage.setItem('selected-theme', getCurrentTheme())
+        localStorage.setItem('selected-icon', getCurrentIcon())
+    })
+})
+
+
+        // filter
+        const items = document.querySelectorAll(".article, .post, .tutorial");
+
+        function filterContent() {
+    const filterValue = document.getElementById("filter").value;
+    console.log("Filtering by:", filterValue); // Log the filter value
+    const items = document.querySelectorAll(".article, .post, .tutorial"); // Select all relevant items
+
+    items.forEach(item => {
+        if (filterValue === "all" || item.getAttribute("data-type") === filterValue) {
+            item.style.display = "block"; // Show the item
+        } else {
+            item.style.display = "none"; // Hide the item
+        }
+    });
+}
+
+
+
+            // Function to toggle like button color
+function toggleLike(button) {
+    button.classList.toggle('liked');  // Ensure 'liked' is correctly applied
+    
+}
+
+// Function to toggle share button color
+function toggleShare(button) {
+    button.classList.toggle('shared');
+}
+
+// For all like buttons
+document.querySelectorAll('.like-button').forEach(button => {
+    button.addEventListener('click', function() {
+        toggleLike(button);  // Call the function to toggle color
+        alert('You liked this post!');  // Alert after toggling
+    });
+});
+
+// For all share buttons
+document.querySelectorAll('.share-button').forEach(button => {
+    button.addEventListener('click', function() {
+        toggleShare(button);  // Call the function to toggle color
+        alert('Post shared!');  // Alert after toggling
+    });
+});
+
+
+ 
+//  TUTORIAL share
+function shareTutorial(element) {
+    const tutorialUrl = element.closest('.tutorial').getAttribute('data-url');
+    
+    if (navigator.share) {
+        navigator.share({
+            title: ' Check out this tutorial!',
+            url: tutorialUrl
+        })
+        .then(() => console.log('Thanks for sharing!'))
+        .catch(error => console.error('Error sharing:', error));
+    } else {
+         
+    // Show custom modal for sharing
+    document.getElementById('shareModal').style.display = 'block';
+        document.getElementById('openInNewTabButton').onclick = function() {
+            window.open(articleUrl, '_blank');
+            closeModal(); // Close the modal after opening the link
+        };
+    }
+}
+// Articles share 
+function shareArticle(element) {
+    const articleUrl = element.closest('.article').getAttribute('data-url');
+    
+    if (navigator.share) {
+        navigator.share({
+            title: 'Check out this article!',
+            url: articleUrl
+        })
+        .then(() => console.log('Thanks for sharing!'))
+        .catch(error => console.error('Error sharing:', error));
+    } else {
+        // Show custom modal for sharing
+        document.getElementById('shareModal').style.display = 'block';
+        document.getElementById('openInNewTabButton').onclick = function() {
+            window.open(articleUrl, '_blank');
+            closeModal(); // Close the modal after opening the link
+        };
+    }
+}
+
+  /*=============== LOGIN ===============*/
+  const loginButton = document.getElementById('login-button'),
+   loginClose  = document.getElementById('login-close'),
+   loginContent = document.getElementById('login-content')
+   
+   //   .........    menu show
+   // validate if contant exists 
+   if(loginButton){
+     loginButton.addEventListener('click', () =>{
+         loginContent.classList.add('show-login')
+     })
+   }
+   
+   // -----------menu hidden 
+   // validate if contant close
+   if(loginButton){
+     loginClose.addEventListener('click', () =>{
+         loginContent.classList.remove('show-login')
+     })
+   }
+
+ 
+    </script>
+</body>
+</html>

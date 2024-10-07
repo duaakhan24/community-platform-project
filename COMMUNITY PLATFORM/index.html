@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--=============== FAVICON ===============-->
+     <link rel="shortcut icon" href="images/logo/2.png" type="image/x-icon">
+
+     <!--=============== REMIXICONS ===============-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+     <!-- FONT AWESOME CDNJS LINK-->
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> -->
+
+     <!--=============== SWIPER CSS ===============-->
+     <link rel="stylesheet" href="swiper-bundle.min.css">
+
+     <!--=============== CSS ===============-->
+     <link rel="stylesheet" href="styles.css">
+    <title>Community Website</title>
+</head>
+<body>
+   <!--==================== HEADER ====================-->
+   <header class="header" id="header">
+    <nav class="nav container">
+       <a href="#" class="nav-logo">
+        <i class="ri-code-s-slash-line"></i>Nerd-Nest
+       </a>
+
+           <div class="nav-menu">
+               <ul class="nav-list">
+
+                   <li class="nav-item">
+                       <a href="index.html" class="nav-link active-link">
+                        <i class="ri-home-2-line"></i>
+                           <span>Home </span>
+                       </a>
+                   </li>
+
+                   <li class="nav-item">
+                    <a href="about.html" class="nav-link">
+                        <i class="ri-file-info-line"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="membership.html" class="nav-link">
+                        <i class="ri-community-line"></i>
+                        <span>Community</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">
+                        <i class="ri-article-line"></i>
+                        <span>Blog</span>
+                    </a>
+                </li>
+
+                   <li class="nav-item">
+                       <a href="project.html" class="nav-link">
+                        <i class="ri-layout-2-fill"></i>
+                           <span> Projects </span>
+                       </a>
+                   </li>
+
+                   
+               </ul>
+           </div>
+
+           <div class="nav-actions">
+               <!-- search button -->
+               <i class="ri-search-2-line search-button " id="search-button"></i>
+
+               <!-- -----login button -->
+               <i class="ri-user-3-line login-button" id="login-button"></i>
+
+               <!-- theme button -->
+               <!-- <i class="ri-moon-line change-theme" id="theme-button"></i> -->
+               <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+           </div>
+
+    </nav>
+ </header>
+
+ <!--==================== SEARCH ====================-->
+ <div class="search" id="search-content">
+    <form action="" class="search-form">
+       <i class="ri-search-2-line search-icon"></i>
+       <input type="search" placeholder="What are you looking for?" class="search-input">
+    </form>
+    <i class="ri-close-line search-close" id="search-close"></i>
+ </div>
+
+      <!--==================== LOGIN ====================-->
+<!--==================== LOGIN ====================-->
+<div class="login grid" id="login-content">
+    <!-- Login Form (User) -->
+    <form action="" class="login-form grid input-group" id="login-form">
+        <div class="login-group grid">
+            <div>
+                <label for="login-email-user" class="login-label">Email</label>
+                <input type="email" class="login-input" placeholder="Write your email" id="login-email-user" required>
+            </div>
+            <div>
+                <label for="login-password-user" class="login-label">Password</label>
+                <input type="password" class="login-input" placeholder="Enter your password" id="login-password-user" required>
+            </div>
+        </div>
+        <div>
+            <span class="login-signup">
+                Are you a new member? <a href="membership.html">Sign In</a>
+            </span>
+            <button type="submit" class="login-button button">Log In</button>
+        </div>
+    </form>
+
+    <i class="ri-close-circle-line login-close" id="login-close"></i>
+</div>
+
+<!--============================== main start  ===================================-->
+<main class="main">
+
+    <!-- ============== HOME  -->
+    <!-- <section class="home section " id="home"> -->
+        <div class="home-container  ">
+            
+         <div class="home-image">
+             <img src="images/landing.png" alt="">
+         </div>
+    <div class="home-content">
+        <h1>One Stop for All Your <span> Coding </span> Skills. </h1>
+        <p>
+            Your All-in-One Coding Platform: Master new skills, collaborate with like-minded individuals, and accelerate your journey from beginner to expert. Whether you're learning to code, seeking guidance, or looking to share knowledge, this is the community that empowers your growth.
+        </p>
+    
+        <button onclick="location.href='membership.html'" class="button">Join Community</button>
+    </div>
+    </div>
+    <!-- </section> -->
+
+   
+      
+    <!--==================== Testinomials ====================-->
+    <section class="feedback section" id="feedback">
+        <h2 class="section-title">Testimonials</h2>
+        <div class="feedback-container container">
+            <div class="feedback-swiper swiper">
+                <div class="swiper-wrapper">
+                    <article class="feedback-card swiper-slide">
+                        <img src="images/girl1.png" alt="image" class="feedback-img">
+                        <h2 class="feedback-title">Ayesha Anwar</h2>
+                        <p class="feedback-description">
+                            "The review section is quite interactive, and I love the image upload feature! I love that
+                            there is a dark mode option for late-night reading. Great job on the platform! if i would i would rate it 10/10"
+                        </p>
+                        <div class="feedback-stars">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-line"></i>
+                        </div>
+                    </article>
+                    <article class="feedback-card swiper-slide">
+                        <img src="images/ptrofiles pic.png" alt="image" class="feedback-img">
+
+                        <h2 class="feedback-title"> M.Tariq </h2>
+                        <p class="feedback-description">
+                            "Fantastic user experience! The layout is well-organized, and I appreciate how quickly I can submit my reviews. The site is responsive and looks great on mobile too. Keep up the great work!"
+                        </p>
+                        <div class="feedback-stars">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            
+                        </div>
+                    </article>
+
+                    <article class="feedback-card swiper-slide">
+                        <img src="images/girl2.png" alt="image" class="feedback-img">
+
+                        <h2 class="feedback-title"> Madiha Hussain</h2>
+                        <p class="feedback-description">
+                            "Absolutely love this platform! It's easy to use, and the design is clean and inviting. Adding my reviews was super simple, and I enjoy reading other users' thoughts on books I’m interested in."
+
+
+                        </p>
+                        <div class="feedback-stars">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            
+                        </div>
+                    </article>
+
+                    <article class="feedback-card swiper-slide">
+                        <img src="images/man.png" alt="image" class="feedback-img">
+
+                        <h2 class="feedback-title"> Syed Bilal </h2>
+                        <p class="feedback-description">
+                            "I’ve been using this platform regularly, and it’s amazing! Everything is straightforward, the rating system is simple to use, and the design makes reading and reviewing books enjoyable."
+                        </p>
+                        <div class="feedback-stars">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-line"></i>
+                        </div>
+                        
+                    </article>
+                    <!-- Add other testimonial cards here -->
+                </div>
+    
+                <!-- Swiper Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+    
+
+     <!-- =================== main close  -->
+</main>
+    <!--=========================================== FOOTER ===========================================================================-->
+    <footer class="footer">
+        <div class="footer-container container grid">
+           <div>
+               <a href="#" class="footer-logo">
+                <i class="ri-code-s-slash-line"></i>NerdNest-Community
+               </a>
+
+               <p class="footer-description">
+                   Give your valuable reviews and explore  <br>
+                   the best eBooks from all your <br>
+                   favorite writers.
+               </p>
+           </div>
+
+           <div class="footer-data grid">
+
+               <div>
+                        <h3 class="footer-title"> About </h3>
+                       <ul class="footer-links">
+                         <li>
+                             <a href="#" class="footer-link">Membership</a>
+                         </li>
+     
+                         <li>
+                             <a href="#" class="footer-link">FAQs</a>
+                         </li>
+                         <li>
+                           <a href="#" class="footer-link"> Privacy policy</a>
+                       </li>
+
+                         <li>
+                             <a href="#" class="footer-link">Terms of services</a>
+                         </li>
+                       </ul>
+             </div>
+
+             <div>
+               <h3 class="footer-title">Community </h3>
+              <ul class="footer-links">
+                <li>
+                    <a href="#" class="footer-link"> Feedback</a>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link"> Help center</a>
+                </li>
+              </ul>
+           </div>
+
+              <div>
+                       <h3 class="footer-title">Contact</h3>
+                        <ul class="footer-links">
+                      <li>
+                       <address class="footer-info">
+                           Gulshan e Iqbal  <br>
+                           Karachi 4321, Pakistan
+                       </address>
+                    </li>
+                    <li>
+                       <address class="footer-info">
+                           e.book@email.com <br>
+                           0987-654-321
+                       </address>
+                    </li>
+                  </ul>
+             </div>
+
+             <div>
+               <h3 class="footer-title">Socials </h3>
+             <div class="footer-social">
+               <a href="https://www.instagram.com/rehmattk24?igsh=MTQxcGtxOTduN2o4ZQ==" target="_blank"  class="footer-social-link">
+                   <i class="ri-instagram-line"></i>
+               </a>
+               <a href=" https://snapchat.com/t/L6rxQXdd" target="_blank"  class="footer-social-link">
+                   <i class="ri-snapchat-line"></i>
+               </a>
+               <a href="https://pin.it/3Z0qC63Vk" target="_blank"  class="footer-social-link">
+                   <i class="ri-pinterest-fill"></i>
+               </a>
+             </div>
+           </div>
+
+           </div>
+        </div>
+        <span class="footer-copy">
+           &#169; All Rights Reserved By Rehmat & Hira
+        </span>
+     </footer>
+
+
+     <!--========== SCROLL UP ==========-->
+     <a href="#" class="scrollup" id="scroll-up">
+       <i class="ri-arrow-up-line"></i>
+     </a>
+    <!-- ---- scrolll reveal from guide  -->
+     <script src="https://unpkg.com/scrollreveal"></script>
+     <!--=============== SCROLLREVEAL ===============-->
+     <script src="scrollreveal.min.js"></script>
+
+     <!--=============== SWIPER JS ===============-->
+     <script src="swiper-bundle.min.js"></script>
+
+     <!--=============== MAIN JS ===============-->
+     <script src="script.js"></script>
+     <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from submitting in the default way
+    
+            // Get user input
+            var email = document.getElementById("login-email-user").value;
+            var password = document.getElementById("login-password-user").value;
+    
+            // Perform simple validation (optional, you can add real authentication checks here)
+            if (email && password) {
+                // If login is successful, redirect to the dashboard
+                window.location.href = "dashboard.html";
+            } else {
+                // Display an error message or handle invalid login
+                alert("Please enter both email and password.");
+            }
+        });
+    </script>
+     
+     <script>
+        function validateForm() {
+            // Perform form validation if needed (this is basic, can be enhanced)
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+    
+            if (username && email && password.length >= 6) {
+                // Show thank you message
+                document.getElementById("thankYouMessage").style.display = "block";
+    
+                // Hide form after submission
+                document.getElementById("registrationForm").style.display = "none";
+    
+                // Redirect to dashboard.html after 2 seconds
+                setTimeout(function() {
+                    window.location.href = "dashboard.html";
+                }, 2000); // 2000ms = 2 seconds
+    
+                return false; // Prevent the form from submitting normally
+            }
+    
+            return false; // Return false to prevent form submission for now
+        }
+
+
+        // FEEEDBACK CARDS SLIDER
+        var swiper = new Swiper('.swiper', {
+    loop: true, // Make the slider loop infinitely
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    slidesPerView: 1, // Adjust as necessary
+    spaceBetween: 30, // Space between slides
+    autoplay: {
+        delay: 3000, // Autoplay with a delay of 3 seconds
+        disableOnInteraction: false,
+    },
+});
+
+ </script>
+</body>
+</html>
